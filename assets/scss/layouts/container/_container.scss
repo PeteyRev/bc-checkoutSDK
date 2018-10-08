@@ -1,0 +1,157 @@
+// =============================================================================
+// GRID (CSS)
+// =============================================================================
+
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: layout("max") + ($container-padding * 4);
+    padding: 0 $container-padding;
+    position: relative;
+    width: layout("fixed");
+
+    @include breakpoint("large") {
+        padding: 0 ($container-padding * 4);
+    }
+}
+
+
+
+
+.checkout--wrapper{
+    border-radius: 8px;
+    width: 550px;
+    margin: 0 auto;
+      box-shadow: 0 10px 60px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    overflow: hidden;
+    min-height: 300px;
+    .checkout--previous-step{
+      font-weight: 500;
+      cursor: pointer;
+      margin: 0.5rem 0 0;
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+    .button.button--CTA {
+      margin-bottom: 0;
+  }
+  }
+  .checkout--header{
+    margin-bottom: .5rem;
+    padding: 1.3rem 2rem;
+    @include grid-row($behavior: "nest");
+    display: flex;
+    .left{
+      @include grid-column(8);
+    }
+    .right{
+      @include grid-column(4);
+      align-self: center;
+    }
+  }
+  .checkout--navigation{
+    clear: both;
+    @include grid-row();
+    > div{
+      @include grid-column(4);
+      text-align: center;
+      border:1px solid#cccccc;
+      padding: .5rem 1rem;
+      font-weight: 500;
+      &:first-child{
+        border-left-color: transparent;
+        border-right-color:transparent;
+      }
+      &:last-child{
+        border-left-color: transparent;
+        border-right-color: transparent;
+      }
+      &.active{
+        background: blue;
+        color:#ffffff;
+        border-color:blue;
+        border-right-color: transparent;
+      }
+    }
+  }
+  .checkout--body{
+    padding: 1rem 2rem 2rem;
+    position: relative;
+    div#loader {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      z-index: 1;
+      background:white;
+      div{
+        position: absolute;
+        left: 50%;
+        top: 40%;
+        transform: translate(-50%, -50%);
+        font-size: 20px;
+        font-weight: 600;
+        img{
+          width: 125px;
+          height: 125px;
+        }
+      }
+    }
+    .form-field{
+      margin-bottom: 1rem;
+    }
+    .form-input{
+      border-radius: 4px;
+    }
+    .continue-btn{
+      text-align: center;
+      margin-top: 1.5rem;
+      margin-bottom: 0;
+    }
+    span.checkout-price {
+      font-weight: 500;
+      color: black;
+      margin-left: .5rem;
+  }
+  }
+  .checkout--totals{
+    font-size: 20px;
+    color:blue;
+    font-weight: 600;
+    p{
+      font-size: 13px;
+      margin: 0;
+      color:#3a3a3a;
+      position: relative;
+      top:-5px;
+    }
+  }
+  
+  .checkout--shipping-options{
+  
+  }
+  
+  .checkout--radio-options {
+    margin: 0 auto;
+    max-width: 400px;
+    .form-field{
+      padding: .7rem 1rem;
+      margin: 0;
+      &:hover{
+        background: #cccccc
+      }
+    }
+    img{
+      max-width: 76px;
+      float: right;
+    }
+    label{
+      width: 100%;
+      font-weight: 500 !important;
+      margin: 0 !important;
+    }
+  }
+  
